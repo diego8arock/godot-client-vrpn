@@ -1,0 +1,13 @@
+Compilation process:
+
+1) Update submodules
+git submodule update --init --recursive
+
+2) move to godot-cpp and generate the godot headers
+cd godot-cpp
+scons godotbinpath="../godot_fork/bin/godot_binary" p=linux generate_bindings=yes
+cd ..
+
+3) Compile plugin
+./compile.sh
+
